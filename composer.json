@@ -31,9 +31,9 @@
         "laravel/sanctum": "^3.2",
         "laravel/telescope": "^4.17",
         "laravel/tinker": "^2.8",
-        "lomkit/laravel-rest-api": "^2.2",
         "mbezhanov/faker-provider-collection": "^2.0",
         "notchpay/notchpay-php": "^1.6",
+        "nyholm/psr7": "^1.8",
         "opcodesio/log-viewer": "^3.1",
         "pavel-mironchik/laravel-backup-panel": "^2.2",
         "propaganistas/laravel-phone": "^5.0",
@@ -41,9 +41,12 @@
         "spatie/laravel-backup": "^8.4",
         "spatie/laravel-data": "^3.9",
         "spatie/laravel-enum": "^3.0",
+        "spatie/laravel-mail-preview": "^6.0",
         "spatie/laravel-model-info": "^1.4",
         "spatie/laravel-query-builder": "^5.6",
         "spiral/roadrunner": "^2023.3",
+        "spiral/roadrunner-http": "^3.2",
+        "spiral/roadrunner-laravel": "^5.12",
         "yaza/laravel-repository-service": "^4.0"
     },
     "require-dev": {
