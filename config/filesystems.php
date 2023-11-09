@@ -36,6 +36,31 @@ return [
             'throw' => false,
         ],
 
+        'public_uploads' => [
+            'driver' => 'local',
+            'root' => public_path(),
+        ],
+
+        'public_datatable' => [
+            'driver' => 'local',
+            'root' => public_path('datatable/json'),
+        ],
+
+        'public_uploads_pdf' => [
+            'driver' => 'local',
+            'root' => public_path('uploads/invoices'),
+        ],
+
+        'public_uploads_excel' => [
+            'driver' => 'local',
+            'root' => public_path('excels'),
+        ],
+
+        'zip' => [
+            'driver' => 'local',
+            'root' => base_path('zip'),
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
