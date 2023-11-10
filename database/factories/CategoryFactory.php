@@ -18,13 +18,14 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         $fak = \Faker\Factory::create();
-        $fak->addProvider(new \Bezhanov\Faker\Provider\Avatar($fak));
+        \Bezhanov\Faker\ProviderCollectionHelper::addAllProvidersTo($fak);
         $name = $this->faker->name;
+        $slug = Str::slug($name);
 
         return [
             'name' => $name,
-            'slug' => Str::slug($name),
-            'img' => $fak->avatar($name, '300x300'),
+            'slug' => $slug,
+            'img' => $fak->avatar($slug, '300x300'),
             'description' => $this->faker->realText(60),
         ];
     }

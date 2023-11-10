@@ -7,22 +7,25 @@ use Spatie\Enum\Laravel\Enum;
 /**
  * @method static self INSTOCK()
  * @method static self OUTSTOCK()
+ * @method static self OUTSTOCK()
  */
-final class ProductStatus extends Enum
+final class ProductStock extends Enum
 {
     protected static function labels(): array
     {
         return [
-            'instock' => 'En stock',
-            'outstock' => 'En rupture de stock',
+            'publish' => 'Publier',
+            'scheduled' => 'Programmé',
+            'inactive' => 'Inactif',
         ];
     }
 
     protected static function values(): array
     {
         return [
-            'instock' => 1,
-            'outstock' => 0,
+            'publish' => 'publish',
+            'scheduled' => 'scheduled',
+            'inactive' => 'inactive',
         ];
     }
 }
