@@ -9,12 +9,14 @@ use Spatie\Enum\Laravel\Enum;
  * @method static self FAILED()
  * @method static self CANCELED()
  * @method static self EXPIRED()
+ * @method static self PENDING()
  */
 final class PaymentStatus extends Enum
 {
     protected static function labels(): array
     {
         return [
+            'pending' => 'En attente',
             'complete' => 'La paiement à été fait',
             'failed' => 'Le paiement a échoué',
             'canceled' => 'Le paiement a été annulé',
@@ -25,6 +27,7 @@ final class PaymentStatus extends Enum
     protected static function values(): array
     {
         return [
+            'pending' => 'pending',
             'complete' => 'payment.complete',
             'failed' => 'payment.failed',
             'canceled' => 'payment.canceled',
