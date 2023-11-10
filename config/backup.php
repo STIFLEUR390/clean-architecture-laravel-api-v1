@@ -30,6 +30,10 @@ return [
                     base_path('vendor'),
                     base_path('node_modules'),
                     base_path('zip'),
+                    base_path('.git'),
+                    base_path('.vscode'),
+                    base_path('.idea'),
+                    base_path('.fleet'),
                 ],
 
                 /*
