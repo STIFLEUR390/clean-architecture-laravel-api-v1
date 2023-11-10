@@ -38,7 +38,6 @@
         "opcodesio/log-viewer": "^3.1",
         "pavel-mironchik/laravel-backup-panel": "^2.2",
         "propaganistas/laravel-phone": "^5.0",
-        "snlbaral/faker-ecommerce": "^2.0",
         "spatie/laravel-backup": "^8.4",
         "spatie/laravel-data": "^3.9",
         "spatie/laravel-enum": "^3.0",

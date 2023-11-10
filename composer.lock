@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "514d363e552c9c7a52ff16bb086545cb",
+    "content-hash": "f7a5540e5fa31ef3d095512991e16c3a",
     "packages": [
         {
             "name": "akaunting/laravel-firewall",
@@ -8428,53 +8428,6 @@
                 }
             ],
             "time": "2023-02-07T11:34:05+00:00"
-        },
-        {
-            "name": "snlbaral/faker-ecommerce",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/snlbaral/FakerEcommerce.git",
-                "reference": "cbdad258a041d3a8ca459dec56f5bc41e6bb05f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/snlbaral/FakerEcommerce/zipball/cbdad258a041d3a8ca459dec56f5bc41e6bb05f6",
-                "reference": "cbdad258a041d3a8ca459dec56f5bc41e6bb05f6",
-                "shasum": ""
-            },
-            "require": {
-                "fakerphp/faker": "^1.9.1",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FakerEcommerce\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sunil Baral"
-                }
-            ],
-            "description": "Ecommerce products names generate using fakerphp/faker",
-            "homepage": "https://github.com/snlbaral/FakerEcommerce",
-            "keywords": [
-                "ecommerce",
-                "faker",
-                "products",
-                "snlbaral"
-            ],
-            "support": {
-                "issues": "https://github.com/snlbaral/FakerEcommerce/issues",
-                "source": "https://github.com/snlbaral/FakerEcommerce/tree/2.0.0"
-            },
-            "time": "2021-02-15T05:56:52+00:00"
         },
         {
             "name": "spatie/db-dumper",
