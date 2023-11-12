@@ -26,7 +26,7 @@ class ProductRepositoryImplement extends Eloquent implements ProductRepository
         return $this->model->whereId($id)->first();
     }
 
-    public function findOrFail($id): Product
+    public function findOrFail($id)
     {
         return $this->model->whereId($id)->firstOrFail();
     }

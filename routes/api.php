@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\V1\CategoryController;
+use App\Http\Controllers\V1\CustomerController;
 use App\Http\Controllers\V1\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,13 +16,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::middleware(['auth:sanctum', 'firewall.all'])->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 Route::prefix('V1')->group(function () {
-    Route::middleware(['auth:sanctum', 'firewall.all'])->get('/user', function (Request $request) {
-        return $request->user();
-    });
-
     Route::apiResource('categories', CategoryController::class);
+
+    // gesttion des produits
     Route::apiResource('products', ProductController::class);
     Route::delete('products/del-multi', [ProductController::class, 'multiDelete']);
+
+    // gestion des clients et de leurs adresse
+    Route::apiResource('customers', CustomerController::class);
+    Route::delete('customers/del-multi', [CustomerController::class, 'multiDelete']);
 });

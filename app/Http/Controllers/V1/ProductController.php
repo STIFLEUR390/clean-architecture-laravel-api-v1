@@ -11,6 +11,9 @@ use App\Services\Product\ProductServiceImplement;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
+/**
+ * @tags Produits
+ */
 class ProductController extends Controller
 {
     protected $productService;
@@ -18,7 +21,7 @@ class ProductController extends Controller
     /**
      * __construct
      *
-     * @param  mixed  $categoryService
+     * @param  mixed  $productService
      * @return void
      */
     public function __construct(ProductServiceImplement $productService)

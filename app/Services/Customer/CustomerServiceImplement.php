@@ -1,20 +1,16 @@
 <?php
 
-namespace App\Services\Product;
+namespace App\Services\Customer;
 
-use App\Models\Product;
-use App\Repositories\Product\ProductRepositoryImplement;
-use App\Traits\UploadFile;
+use App\Models\Customer;
+use App\Repositories\Customer\CustomerRepositoryImplement;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Str;
 use LaravelEasyRepository\ServiceApi;
 
-class ProductServiceImplement extends ServiceApi implements ProductService
+class CustomerServiceImplement extends ServiceApi implements CustomerService
 {
-    use UploadFile;
-
     /**
      * set message api for CRUD
      *
@@ -23,13 +19,13 @@ class ProductServiceImplement extends ServiceApi implements ProductService
      * @param  string  $update_message
      * @param  string  $delete_message
      */
-    protected $title = '';
+    protected $title = 'Client';
 
-    protected $create_message = '';
+    protected $create_message = 'Le client a été créer avec succèss';
 
-    protected $update_message = '';
+    protected $update_message = 'Le client a été mis à jour avec succèss';
 
-    protected $delete_message = '';
+    protected $delete_message = 'Le client a été supprimer avec succèss';
 
     /**
      * don't change $this->mainRepository variable name
@@ -37,12 +33,12 @@ class ProductServiceImplement extends ServiceApi implements ProductService
      */
     protected $mainRepository;
 
-    public function __construct(ProductRepositoryImplement $mainRepository)
+    public function __construct(CustomerRepositoryImplement $mainRepository)
     {
         $this->mainRepository = $mainRepository;
     }
 
-    public function find($id): Product
+    public function find($id): Customer
     {
         try {
             return $this->mainRepository->find($id);
@@ -53,7 +49,7 @@ class ProductServiceImplement extends ServiceApi implements ProductService
         }
     }
 
-    public function findOrFail($id): Product
+    public function findOrFail($id): Customer
     {
         try {
             return $this->mainRepository->findOrFail($id);
@@ -75,13 +71,12 @@ class ProductServiceImplement extends ServiceApi implements ProductService
         }
     }
 
-    public function create($data): Product
+    public function create($data): Customer
     {
         DB::beginTransaction();
         try {
             DB::commit();
-            $data['slug'] = Str::slug($data['name']);
-            $data['img'] = $this->uploadFile($data['img'], 'products');
+            $data['password'] = empty($data['password']) ? bcrypt('password') : bcrypt($data['password']);
 
             return $this->mainRepository->create($data);
         } catch (Exception $exception) {
@@ -92,16 +87,14 @@ class ProductServiceImplement extends ServiceApi implements ProductService
         }
     }
 
-    public function update($id, array $data): Product
+    public function update($id, array $data): Customer
     {
         DB::beginTransaction();
         try {
             DB::commit();
-            if (! empty($data['img'])) {
-                $product = $this->findOrFail($id);
-                $data['img'] = $this->uploadFile($data['img'], 'products', $product->img);
+            if (! empty($data['password'])) {
+                $data['password'] = bcrypt($data['password']);
             }
-            $data['slug'] = Str::slug($data['name']);
 
             return $this->mainRepository->update($id, $data);
         } catch (Exception $exception) {

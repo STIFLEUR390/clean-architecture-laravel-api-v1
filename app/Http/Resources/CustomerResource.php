@@ -19,7 +19,7 @@ class CustomerResource extends JsonResource
             'id' => $this->whenNotNull($this->id),
             'name' => $this->whenNotNull($this->name),
             'email' => $this->whenNotNull($this->email),
-            'password' => $this->whenNotNull($this->password),
+            // 'password' => $this->whenNotNull($this->password),
             'meta' => $this->whenNotNull($this->meta),
             'description' => $this->whenNotNull($this->description),
             'created_at' => $this->whenNotNull(Carbon::parse($this->created_at)),

@@ -13,6 +13,9 @@ use App\Traits\UploadFile;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
+/**
+ * @tags Catégories
+ */
 class CategoryController extends Controller
 {
     use UploadFile;
