@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\V1;
 
-use App\Models\OrderPayment;
-use App\Http\Requests\StoreOrderPaymentRequest;
-use App\Http\Requests\UpdateOrderPaymentRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreOrderDetailRequest;
+use App\Http\Requests\UpdateOrderDetailRequest;
+use App\Models\OrderDetail;
 
-class OrderPaymentController extends Controller
+class OrderDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class OrderPaymentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreOrderPaymentRequest $request)
+    public function store(StoreOrderDetailRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class OrderPaymentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(OrderPayment $orderPayment)
+    public function show(OrderDetail $orderDetail)
     {
         //
     }
@@ -43,7 +44,7 @@ class OrderPaymentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(OrderPayment $orderPayment)
+    public function edit(OrderDetail $orderDetail)
     {
         //
     }
@@ -51,7 +52,7 @@ class OrderPaymentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateOrderPaymentRequest $request, OrderPayment $orderPayment)
+    public function update(UpdateOrderDetailRequest $request, OrderDetail $orderDetail)
     {
         //
     }
@@ -59,7 +60,7 @@ class OrderPaymentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OrderPayment $orderPayment)
+    public function destroy(OrderDetail $orderDetail)
     {
         //
     }

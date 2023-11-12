@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\V1;
 
-use App\Models\Transfer;
-use App\Http\Requests\StoreTransferRequest;
-use App\Http\Requests\UpdateTransferRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreCustomerRequest;
+use App\Http\Requests\UpdateCustomerRequest;
+use App\Models\Customer;
 
-class TransferController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class TransferController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreTransferRequest $request)
+    public function store(StoreCustomerRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class TransferController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Transfer $transfer)
+    public function show(Customer $customer)
     {
         //
     }
@@ -43,7 +44,7 @@ class TransferController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Transfer $transfer)
+    public function edit(Customer $customer)
     {
         //
     }
@@ -51,7 +52,7 @@ class TransferController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTransferRequest $request, Transfer $transfer)
+    public function update(UpdateCustomerRequest $request, Customer $customer)
     {
         //
     }
@@ -59,7 +60,7 @@ class TransferController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Transfer $transfer)
+    public function destroy(Customer $customer)
     {
         //
     }

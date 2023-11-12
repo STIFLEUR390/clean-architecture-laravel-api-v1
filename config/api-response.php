@@ -17,7 +17,7 @@ return [
 
     'validation' => [
         'code' => 422,
-        'message' => 'validation_failed'
+        'message' => 'validation_failed',
     ],
 
     /*

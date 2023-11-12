@@ -1,14 +1,12 @@
 <?php
 
-
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Route;
+
 // use Spatie\Permission\Models\Permission;
 // use Spatie\Permission\Models\Role;
-
 
 if (! function_exists('transformArrayForSelect')) {
     function transformArrayForSelect($arrays)
@@ -23,8 +21,14 @@ if (! function_exists('transformArrayForSelect')) {
         return $my_array_reversed;
     }
 }
+if (! function_exists('parseUrl')) {
+    function parseUrl($url): string
+    {
+        return (filter_var($url, FILTER_VALIDATE_URL)) ? $url : asset($url);
+    }
+}
 
-/* 
+/*
 if (! function_exists('isRole')) {
     function isRole($role): bool
     {
@@ -86,7 +90,6 @@ if (! function_exists('phoneFormat')) {
         return (string) new \Propaganistas\LaravelPhone\PhoneNumber($phone, [$country]);
     }
 }
-
 
 if (! function_exists('exception_image')) {
     function exception_image(): array
@@ -191,7 +194,6 @@ function retirerEspaceExplode($datas): array
     return $new_data;
 }
 
-
 if (! function_exists('datatableParseDate')) {
     function datatableParseDate($date): string
     {
@@ -277,14 +279,14 @@ if (! function_exists('getAppSupportEmail')) {
 if (! function_exists('getAuthorwebsite')) {
     function getAuthorwebsite(): string
     {
-        return "javascript:void(0)";
+        return 'javascript:void(0)';
     }
 }
 
 if (! function_exists('appDocs')) {
     function appDocs(): string
     {
-        return "javascript:void(0)";
+        return 'javascript:void(0)';
     }
 }
 

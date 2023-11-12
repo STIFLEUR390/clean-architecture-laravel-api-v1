@@ -7,7 +7,7 @@ return [
      * Your API path. By default, all routes starting with this path will be added to the docs.
      * If you need to change this behavior, you can add your custom routes resolver using `Scramble::routes()`.
      */
-    'api_path' => 'api',
+    'api_path' => 'api/V1',
 
     /*
      * Your API domain. By default, app domain is used. This is also a part of the default API routes
@@ -24,7 +24,7 @@ return [
         /*
          * Description rendered on the home page of the API documentation (`/docs/api`).
          */
-        'description' => '',
+        'description' => 'Application ecommerce api',
     ],
 
     /*
@@ -39,7 +39,7 @@ return [
         /*
          * URL to an image that displays as a small square logo next to the title, above the table of contents.
          */
-        'logo' => '',
+        'logo' => public_path('logo/logo.png'),
     ],
 
     /*
