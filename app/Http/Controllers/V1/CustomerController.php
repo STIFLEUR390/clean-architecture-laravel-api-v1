@@ -123,7 +123,6 @@ class CustomerController extends Controller
      */
     public function multiDelete(Request $request)
     {
-        dd($request->data);
         $this->validate($request, [
             /**
              * Tableau des id  des clients à supprimer
@@ -133,7 +132,7 @@ class CustomerController extends Controller
              * @example {9a947661-d6c7-4033-9a91-7523d4633cfa, 9a947661-f0d3-4a52-8879-aebfcf9798e1}
              */
             'data' => ['required', 'array'],
-            'data.*' => ['required', Rule::exists('customers', 'id')],
+            // 'data.*' => ['required', Rule::exists('customers', 'id')],
         ]);
 
         $this->customerService->destroy($request->data);

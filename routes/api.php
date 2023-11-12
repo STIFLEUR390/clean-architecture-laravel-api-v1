@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\V1\AddressController;
 use App\Http\Controllers\V1\CategoryController;
 use App\Http\Controllers\V1\CustomerController;
 use App\Http\Controllers\V1\ProductController;
@@ -29,5 +30,7 @@ Route::prefix('V1')->group(function () {
 
     // gestion des clients et de leurs adresse
     Route::apiResource('customers', CustomerController::class);
-    Route::delete('customers/del-multi', [CustomerController::class, 'multiDelete']);
+    Route::post('customers/del-multi', [CustomerController::class, 'multiDelete']);
+    Route::apiResource('addresses', AddressController::class);
+    Route::post('addresses/del-multi', [AddressController::class, 'multiDelete']);
 });

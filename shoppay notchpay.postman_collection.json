@@ -1,0 +1,5490 @@
+{
+	"info": {
+		"_postman_id": "99406b10-a251-437e-b4af-1f021ea0b728",
+		"name": "shoppay notchpay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categorie",
+			"item": [
+				{
+					"name": "Récuperer toute les categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories?sort=-created_at&page=1&per_page=5&fields[categories]=id,name",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "-created_at"
+								},
+								{
+									"key": "include",
+									"value": "products",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "5"
+								},
+								{
+									"key": "filter[name]",
+									"value": "Womens Clothing",
+									"disabled": true
+								},
+								{
+									"key": "filter[slug]",
+									"value": "womens-clothing",
+									"disabled": true
+								},
+								{
+									"key": "fields[categories]",
+									"value": "id,name"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/categories?sort=-name&include=products&page=1&per_page=5&filter[name]=Womens Clothing&filter[slug]=womens-clothing&fields[categories]=id,name",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-name"
+										},
+										{
+											"key": "include",
+											"value": "products"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										},
+										{
+											"key": "filter[name]",
+											"value": "Womens Clothing"
+										},
+										{
+											"key": "filter[slug]",
+											"value": "womens-clothing"
+										},
+										{
+											"key": "fields[categories]",
+											"value": "id,name"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:11:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\",\n            \"name\": \"Womens Clothing\",\n            \"created_at\": \"2023-11-10T18:11:23.401389Z\",\n            \"updated_at\": \"2023-11-10T18:11:23.401416Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://shoppay-notchpay.test/api/categories?page=1\",\n        \"last\": \"http://shoppay-notchpay.test/api/categories?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://shoppay-notchpay.test/api/categories?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://shoppay-notchpay.test/api/categories\",\n        \"per_page\": 5,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/categories?sort=-name&include=products&page=1&per_page=5&fields[categories]=id,name",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-name"
+										},
+										{
+											"key": "include",
+											"value": "products"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										},
+										{
+											"key": "filter[name]",
+											"value": "Womens Clothing",
+											"disabled": true
+										},
+										{
+											"key": "filter[slug]",
+											"value": "womens-clothing",
+											"disabled": true
+										},
+										{
+											"key": "fields[categories]",
+											"value": "id,name"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:12:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\",\n            \"name\": \"Womens Clothing\",\n            \"created_at\": \"2023-11-10T18:12:39.300965Z\",\n            \"updated_at\": \"2023-11-10T18:12:39.300992Z\"\n        },\n        {\n            \"id\": \"9a947661-f0d3-4a52-8879-aebfcf9798e1\",\n            \"name\": \"Watches\",\n            \"created_at\": \"2023-11-10T18:12:39.301057Z\",\n            \"updated_at\": \"2023-11-10T18:12:39.301073Z\"\n        },\n        {\n            \"id\": \"9a947661-3614-4f39-a1e4-3a61e62bf19e\",\n            \"name\": \"Televisions\",\n            \"created_at\": \"2023-11-10T18:12:39.301110Z\",\n            \"updated_at\": \"2023-11-10T18:12:39.301117Z\"\n        },\n        {\n            \"id\": \"9a947661-4201-4c16-a887-79a59729aa61\",\n            \"name\": \"Mobile phones\",\n            \"created_at\": \"2023-11-10T18:12:39.301183Z\",\n            \"updated_at\": \"2023-11-10T18:12:39.301191Z\"\n        },\n        {\n            \"id\": \"9a947661-c67e-4bca-aeea-923186116fdd\",\n            \"name\": \"Mens Clothing\",\n            \"created_at\": \"2023-11-10T18:12:39.301215Z\",\n            \"updated_at\": \"2023-11-10T18:12:39.301221Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://shoppay-notchpay.test/api/categories?page=1\",\n        \"last\": \"http://shoppay-notchpay.test/api/categories?page=2\",\n        \"prev\": null,\n        \"next\": \"http://shoppay-notchpay.test/api/categories?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 2,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://shoppay-notchpay.test/api/categories?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://shoppay-notchpay.test/api/categories?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://shoppay-notchpay.test/api/categories?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://shoppay-notchpay.test/api/categories\",\n        \"per_page\": 5,\n        \"to\": 5,\n        \"total\": 8\n    }\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-name",
+											"disabled": true
+										},
+										{
+											"key": "include",
+											"value": "products",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "5",
+											"disabled": true
+										},
+										{
+											"key": "filter[name]",
+											"value": "Womens Clothing",
+											"disabled": true
+										},
+										{
+											"key": "filter[slug]",
+											"value": "womens-clothing",
+											"disabled": true
+										},
+										{
+											"key": "fields[categories]",
+											"value": "id,name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:12:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"9a947661-3614-4f39-a1e4-3a61e62bf19e\",\n            \"name\": \"Televisions\",\n            \"slug\": \"televisions\",\n            \"img\": \"https://robohash.org/lavina-bins-v.png?size=300x300&set=set1\",\n            \"description\": \"Alice again. 'No, I didn't,' said Alice: '--where's the.\",\n            \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n            \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n        },\n        {\n            \"id\": \"9a947661-4201-4c16-a887-79a59729aa61\",\n            \"name\": \"Mobile phones\",\n            \"slug\": \"mobile-phones\",\n            \"img\": \"https://robohash.org/dr-ronaldo-watsica-sr.png?size=300x300&set=set1\",\n            \"description\": \"Alice hastily, afraid that she had been for some time.\",\n            \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n            \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n        },\n        {\n            \"id\": \"9a947661-6908-4cb7-a91d-e541ba93dcbe\",\n            \"name\": \"Laptops\",\n            \"slug\": \"laptops\",\n            \"img\": \"https://robohash.org/allison-mcdermott-jr.png?size=300x300&set=set1\",\n            \"description\": \"Gryphon. 'The reason is,' said the King. 'Nearly two miles.\",\n            \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n            \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n        },\n        {\n            \"id\": \"9a947661-9c5b-422d-9d2f-2840f1f483bc\",\n            \"name\": \"Cameras\",\n            \"slug\": \"cameras\",\n            \"img\": \"https://robohash.org/jayce-littel-md.png?size=300x300&set=set1\",\n            \"description\": \"And she began shrinking directly. As soon as there was a.\",\n            \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n            \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n        },\n        {\n            \"id\": \"9a947661-c67e-4bca-aeea-923186116fdd\",\n            \"name\": \"Mens Clothing\",\n            \"slug\": \"mens-clothing\",\n            \"img\": \"https://robohash.org/brandi-klocko.png?size=300x300&set=set1\",\n            \"description\": \"I BEG your pardon!' said the Caterpillar. Here was another.\",\n            \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n            \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n        },\n        {\n            \"id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\",\n            \"name\": \"Womens Clothing\",\n            \"slug\": \"womens-clothing\",\n            \"img\": \"https://robohash.org/ms-ruthe-mcglynn.png?size=300x300&set=set1\",\n            \"description\": \"And she's such a tiny little thing!' It did so indeed, and.\",\n            \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n            \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n        },\n        {\n            \"id\": \"9a947661-e40f-4ba1-b8f9-97ae19c95fbb\",\n            \"name\": \"Jewelry\",\n            \"slug\": \"jewelry\",\n            \"img\": \"https://robohash.org/davin-jenkins.png?size=300x300&set=set1\",\n            \"description\": \"Caterpillar. 'Is that all?' said the King; and the.\",\n            \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n            \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n        },\n        {\n            \"id\": \"9a947661-f0d3-4a52-8879-aebfcf9798e1\",\n            \"name\": \"Watches\",\n            \"slug\": \"watches\",\n            \"img\": \"https://robohash.org/clint-bechtelar-dds.png?size=300x300&set=set1\",\n            \"description\": \"I'll tell him--it was for bringing the cook and the Queen.\",\n            \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n            \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ajouter une categorie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ordinateur",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": " \"string\"",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Ordinateur",
+											"type": "text"
+										},
+										{
+											"key": "img",
+											"type": "file",
+											"src": "/C:/Users/DevMaster/Pictures/dizmevue-10/dizme-vite/public/img/portfolio/1.jpg"
+										},
+										{
+											"key": "description",
+											"value": " \"string\"",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:17:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"9a94d555-6630-4b69-977a-63cd55f4a46c\",\n        \"name\": \"Ordinateur\",\n        \"slug\": \"ordinateur\",\n        \"img\": \"uploads/cats/20231110181729-654e73b9508ec-dev-master.png\",\n        \"created_at\": \"2023-11-10T18:17:29.000000Z\",\n        \"updated_at\": \"2023-11-10T18:17:29.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Ordinateur",
+											"type": "text"
+										},
+										{
+											"key": "img",
+											"type": "file",
+											"src": "/C:/Users/DevMaster/Pictures/dizmevue-10/dizme-vite/public/img/portfolio/1.jpg",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": " \"string\"",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:32:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Validation Failed.\",\n    \"errors\": {\n        \"name\": {\n            \"message\": \"The name has already been taken.\",\n            \"rejected_value\": \"Ordinateur\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Récuperer une categorie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{base_url}}/api/categories"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a947661-d6c7-4033-9a91-7523d4633cfa"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:34:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Server Error\",\n    \"error\": {\n        \"message\": \"This action is unauthorized.\",\n        \"code\": 0,\n        \"exception\": \"Illuminate\\\\Auth\\\\Access\\\\AuthorizationException\",\n        \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Auth\\\\Access\\\\Response.php\",\n        \"line\": 151,\n        \"trace\": [\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Auth\\\\Access\\\\Gate.php\",\n                \"line\": 393,\n                \"function\": \"authorize\",\n                \"class\": \"Illuminate\\\\Auth\\\\Access\\\\Response\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Auth\\\\Middleware\\\\Authorize.php\",\n                \"line\": 55,\n                \"function\": \"authorize\",\n                \"class\": \"Illuminate\\\\Auth\\\\Access\\\\Gate\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Auth\\\\Middleware\\\\Authorize\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n                \"line\": 50,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n                \"line\": 159,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n                \"line\": 125,\n                \"function\": \"handleRequest\",\n                \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n                \"line\": 87,\n                \"function\": \"handleRequestUsingNamedLimiter\",\n                \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 116,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n                \"line\": 798,\n                \"function\": \"then\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n                \"line\": 777,\n                \"function\": \"runRouteWithinStack\",\n                \"class\": \"Illuminate\\\\Routing\\\\Router\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n                \"line\": 741,\n                \"function\": \"runRoute\",\n                \"class\": \"Illuminate\\\\Routing\\\\Router\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n                \"line\": 730,\n                \"function\": \"dispatchToRoute\",\n                \"class\": \"Illuminate\\\\Routing\\\\Router\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n                \"line\": 200,\n                \"function\": \"dispatch\",\n                \"class\": \"Illuminate\\\\Routing\\\\Router\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 141,\n                \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\spiral\\\\roadrunner-laravel\\\\src\\\\Dumper\\\\Middleware.php\",\n                \"line\": 45,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Spiral\\\\RoadRunnerLaravel\\\\Dumper\\\\Middleware\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\livewire\\\\livewire\\\\src\\\\DisableBrowserCache.php\",\n                \"line\": 19,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Livewire\\\\DisableBrowserCache\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\beyondcode\\\\laravel-query-detector\\\\src\\\\QueryDetectorMiddleware.php\",\n                \"line\": 33,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"BeyondCode\\\\QueryDetector\\\\QueryDetectorMiddleware\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n                \"line\": 21,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n                \"line\": 31,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n                \"line\": 21,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n                \"line\": 40,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n                \"line\": 27,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n                \"line\": 99,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n                \"line\": 62,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n                \"line\": 39,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 180,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n                \"line\": 116,\n                \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n                \"line\": 175,\n                \"function\": \"then\",\n                \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n                \"line\": 144,\n                \"function\": \"sendRequestThroughRouter\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n                \"type\": \"->\"\n            },\n            {\n                \"file\": \"C:\\\\laragon\\\\www\\\\shoppay-notchpay\\\\public\\\\index.php\",\n                \"line\": 51,\n                \"function\": \"handle\",\n                \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n                \"type\": \"->\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a947661-d6c7-4033-9a91-7523d4633cfa"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:36:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\",\n    \"name\": \"Womens Clothing\",\n    \"slug\": \"womens-clothing\",\n    \"img\": \"https://robohash.org/ms-ruthe-mcglynn.png?size=300x300&set=set1\",\n    \"description\": \"And she's such a tiny little thing!' It did so indeed, and.\",\n    \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n    \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a947661-d6c7-4033-9a91-7523d4633cfa"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:52:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\",\n        \"name\": \"Womens Clothing\",\n        \"slug\": \"womens-clothing\",\n        \"img\": \"https://robohash.org/ms-ruthe-mcglynn.png?size=300x300&set=set1\",\n        \"description\": \"And she's such a tiny little thing!' It did so indeed, and.\",\n        \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n        \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Mettre a jour une catégorie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ordinateur",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": " \"string\"",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a94d555-6630-4b69-977a-63cd55f4a46c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Ordinateur",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": " \"string\"",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a94d555-6630-4b69-977a-63cd55f4a46c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 19:37:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"9a94d555-6630-4b69-977a-63cd55f4a46c\",\n    \"name\": \"Ordinateur\",\n    \"slug\": \"ordinateur\",\n    \"img\": \"uploads/cats/20231110181729-654e73b9508ec-dev-master.png\",\n    \"description\": null,\n    \"created_at\": \"2023-11-10T18:17:29.000000Z\",\n    \"updated_at\": \"2023-11-10T18:17:29.000000Z\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Ordinateur update",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": " \"string\"",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a94d555-6630-4b69-977a-63cd55f4a46c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 19:37:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"9a94d555-6630-4b69-977a-63cd55f4a46c\",\n        \"name\": \"Ordinateur update\",\n        \"slug\": \"ordinateur-update\",\n        \"img\": \"http://shoppay-notchpay.test/uploads/cats/20231110181729-654e73b9508ec-dev-master.png\",\n        \"created_at\": \"2023-11-10T18:17:29.000000Z\",\n        \"updated_at\": \"2023-11-10T19:37:57.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Supprimer une categorie",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ordinateur",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": " \"string\"",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a94d555-6630-4b69-977a-63cd55f4a46c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Ordinateur",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": " \"string\"",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a94d555-6630-4b69-977a-63cd55f4a46cc"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 19:40:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Resource not found.\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Ordinateur",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": " \"string\"",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a94d555-6630-4b69-977a-63cd55f4a46c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 19:40:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k PHP/8.2.3"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Categorie deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "all product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products?sort=-created_at&include=category&page=1&per_page=5&filter[name]=Women's Studio Terry",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "-created_at"
+								},
+								{
+									"key": "include",
+									"value": "category"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "5"
+								},
+								{
+									"key": "filter[name]",
+									"value": "Women's Studio Terry"
+								},
+								{
+									"key": "filter[slug]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "fields[products]",
+									"value": "id,name",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products?sort=-created_at&page=1&per_page=5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-created_at"
+										},
+										{
+											"key": "include",
+											"value": "products",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										},
+										{
+											"key": "filter[name]",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "filter[slug]",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fields[products]",
+											"value": "id,name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 13:35:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": \"9a947664-0dd9-47bd-99ba-18204b358f42\",\n                \"name\": \"Women's Studio Terry Relaxed-Fit Jogger Pant\",\n                \"slug\": \"womens-studio-terry-relaxed-fit-jogger-pant\",\n                \"short_description\": \"The question is, what?' The great question certainly was.\",\n                \"description\": \"She got up and picking the daisies, when suddenly a White Rabbit returning, splendidly dressed, with a sigh: 'it's always tea-time, and we've no time she'd have everybody executed, all round. (It.\",\n                \"price\": 63,\n                \"stock\": \"instock\",\n                \"status\": \"publish\",\n                \"qty\": 62,\n                \"img\": \"https://robohash.org/sleek-concrete-shirt.png?size=300x300&set=set1\",\n                \"created_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"updated_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"category_id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\"\n            },\n            {\n                \"id\": \"9a947664-00e4-4bc5-a917-f7d11e372e4b\",\n                \"name\": \"Pinzon Terry Bathrobe 100% Cotton\",\n                \"slug\": \"pinzon-terry-bathrobe-100-cotton\",\n                \"short_description\": \"The Mouse did not at all a pity. I said \\\"What for?\\\"' 'She.\",\n                \"description\": \"March Hare moved into the garden. Then she went on: 'But why did they live at the end of trials, \\\"There was some attempts at applause, which was a large cat which was full of smoke from one foot to.\",\n                \"price\": 70,\n                \"stock\": \"instock\",\n                \"status\": \"publish\",\n                \"qty\": 37,\n                \"img\": \"https://robohash.org/gorgeous-cotton-lamp.png?size=300x300&set=set1\",\n                \"created_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"updated_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"category_id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\"\n            },\n            {\n                \"id\": \"9a947665-1b9c-4931-9dae-d289d855fc26\",\n                \"name\": \"IWC Men's Portuguese Minute Repeater Gold Watch\",\n                \"slug\": \"iwc-mens-portuguese-minute-repeater-gold-watch\",\n                \"short_description\": \"VERY much out of his head. But at any rate, there's no use.\",\n                \"description\": \"And the muscular strength, which it gave to my boy, I beat him when he finds out who was beginning to write with one of the words a little, and then sat upon it.) 'I'm glad I've seen that done,'.\",\n                \"price\": 80,\n                \"stock\": \"instock\",\n                \"status\": \"inactive\",\n                \"qty\": 37,\n                \"img\": \"https://robohash.org/synergistic-rubber-wallet.png?size=300x300&set=set1\",\n                \"created_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"updated_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"category_id\": \"9a947661-f0d3-4a52-8879-aebfcf9798e1\"\n            },\n            {\n                \"id\": \"9a947664-27fc-4425-b832-b707340e9d78\",\n                \"name\": \"Women's 2-Pack Slim-Fit Tank\",\n                \"slug\": \"womens-2-pack-slim-fit-tank\",\n                \"short_description\": \"King. 'Then it wasn't trouble enough hatching the eggs,'.\",\n                \"description\": \"March Hare. Alice was too much of it altogether; but after a fashion, and this time it all is! I'll try if I shall see it trying in a sort of a tree. 'Did you say \\\"What a pity!\\\"?' the Rabbit was.\",\n                \"price\": 100,\n                \"stock\": \"outstock\",\n                \"status\": \"publish\",\n                \"qty\": 45,\n                \"img\": \"https://robohash.org/intelligent-plastic-bottle.png?size=300x300&set=set1\",\n                \"created_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"updated_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"category_id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\"\n            },\n            {\n                \"id\": \"9a947664-353d-45e6-aedd-78ee0d9b711c\",\n                \"name\": \"AGS Certified 14k White Gold Diamond with Screw Back and Post Stud Earrings\",\n                \"slug\": \"ags-certified-14k-white-gold-diamond-with-screw-back-and-post-stud-earrings\",\n                \"short_description\": \"I'll have you got in as well,' the Hatter began, in a.\",\n                \"description\": \"I'm perfectly sure I don't take this young lady to see how he did not notice this question, but hurriedly went on, 'you see, a dog growls when it's pleased. Now I growl when I'm pleased, and wag my.\",\n                \"price\": 54,\n                \"stock\": \"instock\",\n                \"status\": \"publish\",\n                \"qty\": 51,\n                \"img\": \"https://robohash.org/enormous-concrete-bottle.png?size=300x300&set=set1\",\n                \"created_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"updated_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"category_id\": \"9a947661-e40f-4ba1-b8f9-97ae19c95fbb\"\n            }\n        ],\n        \"links\": {\n            \"first\": \"http://shoppay-notchpay.test/api/V1/products?page=1\",\n            \"last\": \"http://shoppay-notchpay.test/api/V1/products?page=8\",\n            \"prev\": null,\n            \"next\": \"http://shoppay-notchpay.test/api/V1/products?page=2\"\n        },\n        \"meta\": {\n            \"current_page\": 1,\n            \"from\": 1,\n            \"last_page\": 8,\n            \"links\": [\n                {\n                    \"url\": null,\n                    \"label\": \"&laquo; Previous\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=1\",\n                    \"label\": \"1\",\n                    \"active\": true\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=2\",\n                    \"label\": \"2\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=3\",\n                    \"label\": \"3\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=4\",\n                    \"label\": \"4\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=5\",\n                    \"label\": \"5\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=6\",\n                    \"label\": \"6\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=7\",\n                    \"label\": \"7\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=8\",\n                    \"label\": \"8\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=2\",\n                    \"label\": \"Next &raquo;\",\n                    \"active\": false\n                }\n            ],\n            \"path\": \"http://shoppay-notchpay.test/api/V1/products\",\n            \"per_page\": 5,\n            \"to\": 5,\n            \"total\": 40\n        }\n    }\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products?sort=-created_at&include=category&page=1&per_page=5&filter[name]=Women's Studio Terry",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-created_at"
+										},
+										{
+											"key": "include",
+											"value": "category"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										},
+										{
+											"key": "filter[name]",
+											"value": "Women's Studio Terry"
+										},
+										{
+											"key": "filter[slug]",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fields[products]",
+											"value": "id,name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 13:36:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": \"9a947664-0dd9-47bd-99ba-18204b358f42\",\n                \"name\": \"Women's Studio Terry Relaxed-Fit Jogger Pant\",\n                \"slug\": \"womens-studio-terry-relaxed-fit-jogger-pant\",\n                \"short_description\": \"The question is, what?' The great question certainly was.\",\n                \"description\": \"She got up and picking the daisies, when suddenly a White Rabbit returning, splendidly dressed, with a sigh: 'it's always tea-time, and we've no time she'd have everybody executed, all round. (It.\",\n                \"price\": 63,\n                \"stock\": \"instock\",\n                \"status\": \"publish\",\n                \"qty\": 62,\n                \"img\": \"https://robohash.org/sleek-concrete-shirt.png?size=300x300&set=set1\",\n                \"created_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"updated_at\": \"2023-11-10T13:52:01.000000Z\",\n                \"category_id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\",\n                \"category\": {\n                    \"id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\",\n                    \"name\": \"Womens Clothing\",\n                    \"slug\": \"womens-clothing\",\n                    \"img\": \"https://robohash.org/ms-ruthe-mcglynn.png?size=300x300&set=set1\",\n                    \"description\": \"And she's such a tiny little thing!' It did so indeed, and.\",\n                    \"created_at\": \"2023-11-10T13:51:59.000000Z\",\n                    \"updated_at\": \"2023-11-10T13:51:59.000000Z\"\n                }\n            }\n        ],\n        \"links\": {\n            \"first\": \"http://shoppay-notchpay.test/api/V1/products?page=1\",\n            \"last\": \"http://shoppay-notchpay.test/api/V1/products?page=1\",\n            \"prev\": null,\n            \"next\": null\n        },\n        \"meta\": {\n            \"current_page\": 1,\n            \"from\": 1,\n            \"last_page\": 1,\n            \"links\": [\n                {\n                    \"url\": null,\n                    \"label\": \"&laquo; Previous\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/products?page=1\",\n                    \"label\": \"1\",\n                    \"active\": true\n                },\n                {\n                    \"url\": null,\n                    \"label\": \"Next &raquo;\",\n                    \"active\": false\n                }\n            ],\n            \"path\": \"http://shoppay-notchpay.test/api/V1/products\",\n            \"per_page\": 5,\n            \"to\": 1,\n            \"total\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Product test",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sku",
+									"value": "PT524",
+									"type": "text"
+								},
+								{
+									"key": "short_description",
+									"value": "short_description",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "1",
+									"description": "1 pour true, 0 pour false",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "publish",
+									"type": "text"
+								},
+								{
+									"key": "date_to_publish",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "qty",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/DevMaster/Pictures/dizmevue-10/dizme-vite/public/img/portfolio/1.jpg"
+								},
+								{
+									"key": "category_id",
+									"value": "9a947661-d6c7-4033-9a91-7523d4633cfa",
+									"description": "l'id de la catégorie",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Product test",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sku",
+											"value": "PT524",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "short_description",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "1",
+											"description": "1 pour true, 0 pour false",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "date_to_publish",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "qty",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "img",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "category_id",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 13:39:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Validation Failed.\",\n    \"errors\": {\n        \"status\": {\n            \"message\": \"The selected status is invalid.\",\n            \"rejected_value\": \"0\"\n        },\n        \"img\": {\n            \"message\": \"The img field is required.\",\n            \"rejected_value\": null\n        },\n        \"category_id\": {\n            \"message\": \"The category id field is required.\",\n            \"rejected_value\": null\n        }\n    }\n}"
+						},
+						{
+							"name": "errror",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Product test",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sku",
+											"value": "PT524",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "short_description",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "1",
+											"description": "1 pour true, 0 pour false",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "publish",
+											"type": "text"
+										},
+										{
+											"key": "date_to_publish",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "qty",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "img",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "category_id",
+											"value": "9a947661-d6c7-4033-9a91-7523d4633cfa",
+											"description": "l'id de la catégorie",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 13:41:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Validation Failed.\",\n    \"errors\": {\n        \"status\": {\n            \"message\": \"The selected status is invalid.\",\n            \"rejected_value\": \"publish\"\n        },\n        \"img\": {\n            \"message\": \"The img field is required.\",\n            \"rejected_value\": null\n        }\n    }\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Product test",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sku",
+											"value": "PT524",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "short_description",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "1",
+											"description": "1 pour true, 0 pour false",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "publish",
+											"type": "text"
+										},
+										{
+											"key": "date_to_publish",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "qty",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "img",
+											"type": "file",
+											"src": "/C:/Users/DevMaster/Pictures/dizmevue-10/dizme-vite/public/img/portfolio/1.jpg"
+										},
+										{
+											"key": "category_id",
+											"value": "9a947661-d6c7-4033-9a91-7523d4633cfa",
+											"description": "l'id de la catégorie",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 14:10:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a9882f9-9218-4986-8ac3-538912faa0e1\",\n        \"name\": \"Product test\",\n        \"slug\": \"product-test\",\n        \"sku\": \"PT524\",\n        \"short_description\": \"short_description\",\n        \"description\": \"description\",\n        \"price\": \"500\",\n        \"stock\": \"1\",\n        \"status\": \"publish\",\n        \"qty\": \"50\",\n        \"img\": \"uploads/products/20231112141030-6550dcd6efbd1-dev-master.png\",\n        \"created_at\": \"2023-11-12T14:10:31.000000Z\",\n        \"updated_at\": \"2023-11-12T14:10:31.000000Z\",\n        \"category_id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Récuperer un produit",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/products/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a9882f9-9218-4986-8ac3-538912faa0e1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/products/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a9882f9-9218-4986-8ac3-538912faa0e1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 14:24:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a9882f9-9218-4986-8ac3-538912faa0e1\",\n        \"name\": \"Product test\",\n        \"slug\": \"product-test\",\n        \"sku\": \"PT524\",\n        \"short_description\": \"short_description\",\n        \"description\": \"description\",\n        \"price\": 500,\n        \"stock\": \"instock\",\n        \"status\": \"publish\",\n        \"qty\": 50,\n        \"img\": \"http://shoppay-notchpay.test/uploads/products/20231112141030-6550dcd6efbd1-dev-master.png\",\n        \"created_at\": \"2023-11-12T14:10:31.000000Z\",\n        \"updated_at\": \"2023-11-12T14:10:31.000000Z\",\n        \"category_id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "mettre a jour un produit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Product test",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sku",
+									"value": "PT524",
+									"type": "text"
+								},
+								{
+									"key": "short_description",
+									"value": "short_description",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "scheduled",
+									"type": "text"
+								},
+								{
+									"key": "date_to_publish",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "qty",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "9a947661-d6c7-4033-9a91-7523d4633cfa",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/products/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a9882f9-9218-4986-8ac3-538912faa0e1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Product test",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sku",
+											"value": "PT524",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "short_description",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "publish",
+											"type": "text"
+										},
+										{
+											"key": "date_to_publish",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "qty",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "9a947661-d6c7-4033-9a91-7523d4633cfa",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/products/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a9882f9-9218-4986-8ac3-538912faa0e1"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 14:33:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Validation Failed.\",\n    \"errors\": {\n        \"status\": {\n            \"message\": \"The selected status is invalid.\",\n            \"rejected_value\": \"publish\"\n        }\n    }\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Product test",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sku",
+											"value": "PT524",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "short_description",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "scheduled",
+											"type": "text"
+										},
+										{
+											"key": "date_to_publish",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "qty",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "9a947661-d6c7-4033-9a91-7523d4633cfa",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/products/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a9882f9-9218-4986-8ac3-538912faa0e1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 14:34:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a9882f9-9218-4986-8ac3-538912faa0e1\",\n        \"name\": \"Product test\",\n        \"slug\": \"product-test\",\n        \"sku\": \"PT524\",\n        \"short_description\": \"short_description\",\n        \"description\": \"description\",\n        \"price\": \"500\",\n        \"stock\": \"1\",\n        \"status\": \"scheduled\",\n        \"qty\": \"50\",\n        \"img\": \"http://shoppay-notchpay.test/uploads/products/20231112141030-6550dcd6efbd1-dev-master.png\",\n        \"created_at\": \"2023-11-12T14:10:31.000000Z\",\n        \"updated_at\": \"2023-11-12T14:34:11.000000Z\",\n        \"category_id\": \"9a947661-d6c7-4033-9a91-7523d4633cfa\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Supprimer un produit",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/products/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a989d15-6b2e-421a-a103-b110f8ec62cb"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/products/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a989d15-6b2e-421a-a103-b110f8ec62cb"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 15:24:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Supprimer plusieurs produit",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": [\r\n        \"9a989d15-6b2e-421a-a103-b110f8ec62cb\",\r\n        \"9a947664-0dd9-47bd-99ba-18204b358f42\"\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/products/del-multi",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"del-multi"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "data[]",
+											"value": "9a989d15-6b2e-421a-a103-b110f8ec62cb",
+											"type": "default"
+										},
+										{
+											"key": "data[]",
+											"value": "9a947664-0dd9-47bd-99ba-18204b358f42",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/products/del-multi",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"del-multi"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 15:27:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": [\r\n        \"9a989d15-6b2e-421a-a103-b110f8ec62cb\",\r\n        \"9a947664-0dd9-47bd-99ba-18204b358f42\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products/del-multi",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"del-multi"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 15:29:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Address",
+					"item": [
+						{
+							"name": "Récuperer toute les adresses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/customers?sort=-created_at&page=1&per_page=5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-created_at"
+										},
+										{
+											"key": "include",
+											"value": "products",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										},
+										{
+											"key": "filter[name]",
+											"value": "Womens Clothing",
+											"disabled": true
+										},
+										{
+											"key": "fields[customers]",
+											"value": "id,name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/addresses?page=1&per_page=2&include=customer",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses"
+											],
+											"query": [
+												{
+													"key": "include",
+													"value": "products",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "filter[name]",
+													"value": "Womens Clothing",
+													"disabled": true
+												},
+												{
+													"key": "fields[customers]",
+													"value": "id,name",
+													"disabled": true
+												},
+												{
+													"key": "per_page",
+													"value": "2"
+												},
+												{
+													"key": "include",
+													"value": "customer"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:15:57 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": \"9a94765c-eb70-40b4-a4da-a4fd3a87d3f8\",\n                \"name\": \"Maximillian Kling\",\n                \"country\": \"Afghanistan\",\n                \"city\": \"South Katarina\",\n                \"line1\": \"44961 Magdalen Creek Apt. 231\\nNew Madge, DE 64139-6562\",\n                \"state\": \"borough\",\n                \"personnal\": 1,\n                \"civility\": \"M.\",\n                \"created_at\": \"2023-11-10T13:51:56.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:56.000000Z\",\n                \"customer_id\": \"9a94765c-cb2c-48fb-b08e-319a3b610ccf\",\n                \"customer\": null\n            },\n            {\n                \"id\": \"9a94765d-0162-407d-b18a-0ab3593d2321\",\n                \"name\": \"Nelda Cronin\",\n                \"country\": \"Greece\",\n                \"city\": \"North Angelina\",\n                \"line1\": \"9725 Broderick Forks Apt. 601\\nHoustonborough, PA 11061\",\n                \"line2\": \"344 Ena Grove\\nBaileyshire, AR 60170-0214\",\n                \"state\": \"ville\",\n                \"personnal\": 0,\n                \"civility\": \"Mlle\",\n                \"created_at\": \"2023-11-10T13:51:56.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:56.000000Z\",\n                \"customer_id\": \"9a94765c-cb2c-48fb-b08e-319a3b610ccf\",\n                \"customer\": null\n            }\n        ],\n        \"links\": {\n            \"first\": \"http://shoppay-notchpay.test/api/V1/addresses?page=1\",\n            \"last\": \"http://shoppay-notchpay.test/api/V1/addresses?page=25\",\n            \"prev\": null,\n            \"next\": \"http://shoppay-notchpay.test/api/V1/addresses?page=2\"\n        },\n        \"meta\": {\n            \"current_page\": 1,\n            \"from\": 1,\n            \"last_page\": 25,\n            \"links\": [\n                {\n                    \"url\": null,\n                    \"label\": \"&laquo; Previous\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=1\",\n                    \"label\": \"1\",\n                    \"active\": true\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=2\",\n                    \"label\": \"2\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=3\",\n                    \"label\": \"3\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=4\",\n                    \"label\": \"4\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=5\",\n                    \"label\": \"5\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=6\",\n                    \"label\": \"6\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=7\",\n                    \"label\": \"7\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=8\",\n                    \"label\": \"8\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=9\",\n                    \"label\": \"9\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=10\",\n                    \"label\": \"10\",\n                    \"active\": false\n                },\n                {\n                    \"url\": null,\n                    \"label\": \"...\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=24\",\n                    \"label\": \"24\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=25\",\n                    \"label\": \"25\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/addresses?page=2\",\n                    \"label\": \"Next &raquo;\",\n                    \"active\": false\n                }\n            ],\n            \"path\": \"http://shoppay-notchpay.test/api/V1/addresses\",\n            \"per_page\": 2,\n            \"to\": 2,\n            \"total\": 50\n        }\n    }\n}"
+								},
+								{
+									"name": "Récuperer toute les adresses d'un client via sont id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/addresses?page=1&filter[customer_id]=9a94765f-ad14-443f-8756-a8c035c1ce9e",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses"
+											],
+											"query": [
+												{
+													"key": "include",
+													"value": "products",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "filter[customer_id]",
+													"value": "9a94765f-ad14-443f-8756-a8c035c1ce9e"
+												},
+												{
+													"key": "fields[customers]",
+													"value": "id,name",
+													"disabled": true
+												},
+												{
+													"key": "per_page",
+													"value": "2",
+													"disabled": true
+												},
+												{
+													"key": "include",
+													"value": "customer",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:19:25 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": \"9a94765f-c441-4c80-9131-204ef5436b28\",\n                \"name\": \"Kellie O'Hara\",\n                \"country\": \"Canada\",\n                \"city\": \"Goldnerport\",\n                \"line1\": \"560 Schimmel Passage\\nSouth Shainastad, NV 44138\",\n                \"postal_code\": \"00077-8917\",\n                \"state\": \"view\",\n                \"personnal\": 0,\n                \"civility\": \"Mme\",\n                \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"customer_id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                \"customer\": {\n                    \"id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                    \"name\": \"Hailie Denesik\",\n                    \"email\": \"jyundt@gmail.com\",\n                    \"description\": \"The poor little thing grunted in reply (it had left off sneezing by this time.) 'You're nothing but a pack of cards: the Knave of Hearts, he stole those tarts, And took them quite away!' 'Consider.\",\n                    \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                    \"updated_at\": \"2023-11-10T13:51:58.000000Z\"\n                }\n            },\n            {\n                \"id\": \"9a947660-0f37-4a09-ba65-3c3e1b840579\",\n                \"name\": \"Palma Kshlerin\",\n                \"country\": \"Turks and Caicos Islands\",\n                \"city\": \"Goodwinmouth\",\n                \"line1\": \"4370 Kody Path\\nSouth Darrel, SC 90555\",\n                \"postal_code\": \"19706-6108\",\n                \"state\": \"land\",\n                \"personnal\": 1,\n                \"civility\": \"Mlle\",\n                \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"customer_id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                \"customer\": {\n                    \"id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                    \"name\": \"Hailie Denesik\",\n                    \"email\": \"jyundt@gmail.com\",\n                    \"description\": \"The poor little thing grunted in reply (it had left off sneezing by this time.) 'You're nothing but a pack of cards: the Knave of Hearts, he stole those tarts, And took them quite away!' 'Consider.\",\n                    \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                    \"updated_at\": \"2023-11-10T13:51:58.000000Z\"\n                }\n            },\n            {\n                \"id\": \"9a947660-3605-4aa7-811f-324899e5fac1\",\n                \"name\": \"Isai Hamill\",\n                \"country\": \"Austria\",\n                \"city\": \"Evelinechester\",\n                \"line1\": \"30577 Quigley Neck Apt. 514\\nWest Vernmouth, NJ 04945-8865\",\n                \"line2\": \"774 Greenholt Wall Suite 618\\nBrentfurt, NC 54725-8502\",\n                \"postal_code\": \"62458-9761\",\n                \"state\": \"fort\",\n                \"personnal\": 0,\n                \"civility\": \"M.\",\n                \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"customer_id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                \"customer\": {\n                    \"id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                    \"name\": \"Hailie Denesik\",\n                    \"email\": \"jyundt@gmail.com\",\n                    \"description\": \"The poor little thing grunted in reply (it had left off sneezing by this time.) 'You're nothing but a pack of cards: the Knave of Hearts, he stole those tarts, And took them quite away!' 'Consider.\",\n                    \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                    \"updated_at\": \"2023-11-10T13:51:58.000000Z\"\n                }\n            },\n            {\n                \"id\": \"9a947660-42b7-421e-8e6f-f1444bbb31fa\",\n                \"name\": \"Johan Medhurst\",\n                \"country\": \"Nigeria\",\n                \"city\": \"Walshstad\",\n                \"line1\": \"288 Parker Isle\\nEast Laviniatown, MI 73636\",\n                \"postal_code\": \"12355\",\n                \"state\": \"chester\",\n                \"personnal\": 0,\n                \"civility\": \"M.\",\n                \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"customer_id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                \"customer\": {\n                    \"id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                    \"name\": \"Hailie Denesik\",\n                    \"email\": \"jyundt@gmail.com\",\n                    \"description\": \"The poor little thing grunted in reply (it had left off sneezing by this time.) 'You're nothing but a pack of cards: the Knave of Hearts, he stole those tarts, And took them quite away!' 'Consider.\",\n                    \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                    \"updated_at\": \"2023-11-10T13:51:58.000000Z\"\n                }\n            },\n            {\n                \"id\": \"9a947660-5dae-4429-9890-48a9af0a93f5\",\n                \"name\": \"Paris Runolfsdottir\",\n                \"country\": \"Belize\",\n                \"city\": \"Batzmouth\",\n                \"line1\": \"4276 Gleichner Forge Apt. 753\\nNorth Waylonmouth, FL 48690-8085\",\n                \"line2\": \"9964 Macy Point\\nSouth Yolandafurt, NV 13883-8120\",\n                \"postal_code\": \"05660-7063\",\n                \"state\": \"land\",\n                \"personnal\": 1,\n                \"civility\": \"M.\",\n                \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"customer_id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                \"customer\": {\n                    \"id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                    \"name\": \"Hailie Denesik\",\n                    \"email\": \"jyundt@gmail.com\",\n                    \"description\": \"The poor little thing grunted in reply (it had left off sneezing by this time.) 'You're nothing but a pack of cards: the Knave of Hearts, he stole those tarts, And took them quite away!' 'Consider.\",\n                    \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                    \"updated_at\": \"2023-11-10T13:51:58.000000Z\"\n                }\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Ajouter ue addresse",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "customer_id",
+											"value": "9a98b55b-5855-4a97-86cb-9a94ee41e52a",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Adresse",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Douala",
+											"type": "text"
+										},
+										{
+											"key": "line1",
+											"value": "Malangue",
+											"type": "text"
+										},
+										{
+											"key": "line2",
+											"value": "string",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "postal_code",
+											"value": "string",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "Littoral,",
+											"type": "text"
+										},
+										{
+											"key": "personnal",
+											"value": "false,",
+											"type": "text"
+										},
+										{
+											"key": "civility",
+											"value": "M.",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "Cameroun",
+											"type": "default"
+										},
+										{
+											"key": "personnal",
+											"value": "1",
+											"type": "default"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/addresses",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "customer_id",
+													"value": "9a98b55b-5855-4a97-86cb-9a94ee41e52a",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "Adresse",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "Douala",
+													"type": "text"
+												},
+												{
+													"key": "line1",
+													"value": "Malangue",
+													"type": "text"
+												},
+												{
+													"key": "line2",
+													"value": "string",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "postal_code",
+													"value": "string",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "state",
+													"value": "Littoral,",
+													"type": "text"
+												},
+												{
+													"key": "personnal",
+													"value": "false,",
+													"type": "text"
+												},
+												{
+													"key": "civility",
+													"value": "M.",
+													"type": "text"
+												},
+												{
+													"key": "country",
+													"value": "Cameroun",
+													"type": "default"
+												},
+												{
+													"key": "personnal",
+													"value": "1",
+													"type": "default"
+												}
+											],
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/addresses",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:24:49 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "57"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a98dded-64db-4651-80b4-e16dfd9673bb\",\n        \"name\": \"Adresse\",\n        \"country\": \"Cameroun\",\n        \"city\": \"Douala\",\n        \"line1\": \"Malangue\",\n        \"state\": \"Littoral,\",\n        \"personnal\": \"1\",\n        \"civility\": \"M.\",\n        \"created_at\": \"2023-11-12T18:24:50.000000Z\",\n        \"updated_at\": \"2023-11-12T18:24:50.000000Z\",\n        \"customer_id\": \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Récuperer une addresse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/addresses/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"addresses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a98dded-64db-4651-80b4-e16dfd9673bb"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/addresses/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:25:21 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Resource not found.\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/addresses/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "9a98dded-64db-4651-80b4-e16dfd9673bb"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:25:34 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a98dded-64db-4651-80b4-e16dfd9673bb\",\n        \"name\": \"Adresse\",\n        \"country\": \"Cameroun\",\n        \"city\": \"Douala\",\n        \"line1\": \"Malangue\",\n        \"state\": \"Littoral,\",\n        \"personnal\": 1,\n        \"civility\": \"M.\",\n        \"created_at\": \"2023-11-12T18:24:50.000000Z\",\n        \"updated_at\": \"2023-11-12T18:24:50.000000Z\",\n        \"customer_id\": \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Mette a jour une addresses",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "customer_id",
+											"value": "9a98b55b-5855-4a97-86cb-9a94ee41e52a",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "Adresse test",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Douala",
+											"type": "text"
+										},
+										{
+											"key": "line1",
+											"value": "Malangue",
+											"type": "text"
+										},
+										{
+											"key": "line2",
+											"value": "string",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "postal_code",
+											"value": "string",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "Littoral,",
+											"type": "text"
+										},
+										{
+											"key": "personnal",
+											"value": "false,",
+											"type": "text"
+										},
+										{
+											"key": "civility",
+											"value": "M.",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "Cameroun",
+											"type": "text"
+										},
+										{
+											"key": "personnal",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/addresses/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"addresses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a98dded-64db-4651-80b4-e16dfd9673bb"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "customer_id",
+													"value": "9a98b55b-5855-4a97-86cb-9a94ee41e52a",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "Adresse test",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "Douala",
+													"type": "text"
+												},
+												{
+													"key": "line1",
+													"value": "Malangue",
+													"type": "text"
+												},
+												{
+													"key": "line2",
+													"value": "string",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "postal_code",
+													"value": "string",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "state",
+													"value": "Littoral,",
+													"type": "text"
+												},
+												{
+													"key": "personnal",
+													"value": "false,",
+													"type": "text"
+												},
+												{
+													"key": "civility",
+													"value": "M.",
+													"type": "text"
+												},
+												{
+													"key": "country",
+													"value": "Cameroun",
+													"type": "text"
+												},
+												{
+													"key": "personnal",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/addresses/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "9a98dded-64db-4651-80b4-e16dfd9673bb"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:27:54 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Resource not found.\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "customer_id",
+													"value": "9a98b55b-5855-4a97-86cb-9a94ee41e52a",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "Adresse test",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "Douala",
+													"type": "text"
+												},
+												{
+													"key": "line1",
+													"value": "Malangue",
+													"type": "text"
+												},
+												{
+													"key": "line2",
+													"value": "string",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "postal_code",
+													"value": "string",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "state",
+													"value": "Littoral,",
+													"type": "text"
+												},
+												{
+													"key": "personnal",
+													"value": "false,",
+													"type": "text"
+												},
+												{
+													"key": "civility",
+													"value": "M.",
+													"type": "text"
+												},
+												{
+													"key": "country",
+													"value": "Cameroun",
+													"type": "text"
+												},
+												{
+													"key": "personnal",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/addresses/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "9a98dded-64db-4651-80b4-e16dfd9673bb"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:28:24 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a98dded-64db-4651-80b4-e16dfd9673bb\",\n        \"name\": \"Adresse test\",\n        \"country\": \"Cameroun\",\n        \"city\": \"Douala\",\n        \"line1\": \"Malangue\",\n        \"line2\": \"string\",\n        \"postal_code\": \"cc237\",\n        \"state\": \"Littoral,\",\n        \"personnal\": \"1\",\n        \"civility\": \"M.\",\n        \"created_at\": \"2023-11-12T18:24:50.000000Z\",\n        \"updated_at\": \"2023-11-12T18:28:25.000000Z\",\n        \"customer_id\": \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Supprimer une addresses",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/addresses/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"addresses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a98dded-64db-4651-80b4-e16dfd9673bb"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/addresses/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "9a98dded-64db-4651-80b4-e16dfd9673bb"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:29:04 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"ok\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Supprimer plusieurs addresses",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": [\r\n        \"9a98dded-64db-4651-80b4-e16dfd9673bb\",\r\n        \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\",\r\n        \"9a98b514-cdcd-4476-95a9-95da533724f8\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/addresses/del-multi",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"addresses",
+										"del-multi"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "default"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"data\": [\r\n        \"9a98dded-64db-4651-80b4-e16dfd9673bb\",\r\n        \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\",\r\n        \"9a98b514-cdcd-4476-95a9-95da533724f8\"\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/addresses/del-multi",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"addresses",
+												"del-multi"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 12 Nov 2023 18:35:32 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"ok\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Récuperer toute les clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers?sort=-created_at&page=1&per_page=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "-created_at"
+								},
+								{
+									"key": "include",
+									"value": "products",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "5"
+								},
+								{
+									"key": "filter[name]",
+									"value": "Womens Clothing",
+									"disabled": true
+								},
+								{
+									"key": "fields[customers]",
+									"value": "id,name",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/customers?sort=-created_at&page=1&per_page=5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "-created_at"
+										},
+										{
+											"key": "include",
+											"value": "products",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										},
+										{
+											"key": "filter[name]",
+											"value": "Womens Clothing",
+											"disabled": true
+										},
+										{
+											"key": "fields[customers]",
+											"value": "id,name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 16:28:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": \"9a94765f-ad14-443f-8756-a8c035c1ce9e\",\n                \"name\": \"Hailie Denesik\",\n                \"email\": \"jyundt@gmail.com\",\n                \"description\": \"The poor little thing grunted in reply (it had left off sneezing by this time.) 'You're nothing but a pack of cards: the Knave of Hearts, he stole those tarts, And took them quite away!' 'Consider.\",\n                \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:58.000000Z\"\n            },\n            {\n                \"id\": \"9a947660-7136-4355-85a0-07d245c3de0c\",\n                \"name\": \"Olin Bauch\",\n                \"email\": \"audie92@stehr.net\",\n                \"description\": \"I wish you could manage it?) 'And what are they made of?' Alice asked in a great many more than that, if you please! \\\"William the Conqueror, whose cause was favoured by the way, was the same solemn.\",\n                \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:58.000000Z\"\n            },\n            {\n                \"id\": \"9a947660-d986-48c4-8884-ff0eec1404bd\",\n                \"name\": \"Minnie Hagenes\",\n                \"email\": \"hweber@gmail.com\",\n                \"description\": \"Alice remarked. 'Right, as usual,' said the Hatter, 'when the Queen said--' 'Get to your places!' shouted the Queen. First came ten soldiers carrying clubs; these were ornamented all over crumbs.'.\",\n                \"created_at\": \"2023-11-10T13:51:58.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:58.000000Z\"\n            },\n            {\n                \"id\": \"9a94765d-ff64-46b7-bef4-023c2dc65340\",\n                \"name\": \"Berta Marvin\",\n                \"email\": \"cgreenholt@yahoo.com\",\n                \"description\": \"Alice. 'I've read that in some book, but I THINK I can go back and see how he can EVEN finish, if he would not allow without knowing how old it was, and, as she could. 'The game's going on within--a.\",\n                \"created_at\": \"2023-11-10T13:51:57.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:57.000000Z\"\n            },\n            {\n                \"id\": \"9a94765e-91db-4f0a-a934-d166d3aa9802\",\n                \"name\": \"Lois Kunde\",\n                \"email\": \"haltenwerth@ward.com\",\n                \"description\": \"Alice, timidly; 'some of the teacups as the White Rabbit read out, at the stick, and made another snatch in the kitchen that did not much like keeping so close to her, 'if we had the dish as its.\",\n                \"created_at\": \"2023-11-10T13:51:57.000000Z\",\n                \"updated_at\": \"2023-11-10T13:51:57.000000Z\"\n            }\n        ],\n        \"links\": {\n            \"first\": \"http://shoppay-notchpay.test/api/V1/customers?page=1\",\n            \"last\": \"http://shoppay-notchpay.test/api/V1/customers?page=2\",\n            \"prev\": null,\n            \"next\": \"http://shoppay-notchpay.test/api/V1/customers?page=2\"\n        },\n        \"meta\": {\n            \"current_page\": 1,\n            \"from\": 1,\n            \"last_page\": 2,\n            \"links\": [\n                {\n                    \"url\": null,\n                    \"label\": \"&laquo; Previous\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/customers?page=1\",\n                    \"label\": \"1\",\n                    \"active\": true\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/customers?page=2\",\n                    \"label\": \"2\",\n                    \"active\": false\n                },\n                {\n                    \"url\": \"http://shoppay-notchpay.test/api/V1/customers?page=2\",\n                    \"label\": \"Next &raquo;\",\n                    \"active\": false\n                }\n            ],\n            \"path\": \"http://shoppay-notchpay.test/api/V1/customers\",\n            \"per_page\": 5,\n            \"to\": 5,\n            \"total\": 10\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Ajouter un client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "User test",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "meta",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "User test",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "test@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default"
+										},
+										{
+											"key": "meta",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/customers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 16:30:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a98b4fb-4810-4ec4-b030-1f0a382b184b\",\n        \"name\": \"User test\",\n        \"email\": \"test@gmail.com\",\n        \"created_at\": \"2023-11-12T16:30:20.000000Z\",\n        \"updated_at\": \"2023-11-12T16:30:20.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "User test",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "test@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "meta",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/customers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 16:31:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Validation Failed.\",\n    \"errors\": {\n        \"email\": {\n            \"message\": \"The email has already been taken.\",\n            \"rejected_value\": \"test@gmail.com\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Récuperer un client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/customers/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 16:33:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a98b56c-7157-4da5-b0d0-043aa00271c9\",\n        \"name\": \"User test\",\n        \"email\": \"test@gmail.com\",\n        \"created_at\": \"2023-11-12T16:31:34.000000Z\",\n        \"updated_at\": \"2023-11-12T16:31:34.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Mette a jour un client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "User test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@update.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "meta",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "User test",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "test@update.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "meta",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/customers/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 16:40:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"9a98b56c-7157-4da5-b0d0-043aa00271c9\",\n        \"name\": \"User test\",\n        \"email\": \"test@update.com\",\n        \"created_at\": \"2023-11-12T16:31:34.000000Z\",\n        \"updated_at\": \"2023-11-12T16:40:23.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Supprimer un client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/customers/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 16:41:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\"\n}"
+						},
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/customers/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 16:41:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Resource not found.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Supprimer plusieurs clients",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": [\r\n        \"9a98b56c-7157-4da5-b0d0-043aa00271c9\",\r\n        \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\",\r\n        \"9a98b514-cdcd-4476-95a9-95da533724f8\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/del-multi",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"del-multi"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": [\r\n        \"9a98b56c-7157-4da5-b0d0-043aa00271c9\",\r\n        \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\",\r\n        \"9a98b514-cdcd-4476-95a9-95da533724f8\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/customers/del-multi",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers",
+										"del-multi"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 16:45:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Resource not found.\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": [\r\n        \"9a98b56c-7157-4da5-b0d0-043aa00271c9\",\r\n        \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\",\r\n        \"9a98b514-cdcd-4476-95a9-95da533724f8\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/customers/del-multi",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customers",
+										"del-multi"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 12 Nov 2023 18:36:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.47 (Win64) OpenSSL/1.1.1k mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"ok\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Base",
+			"item": [
+				{
+					"name": "Récuperer toute les clients Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers?sort=-created_at&page=1&per_page=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "-created_at"
+								},
+								{
+									"key": "include",
+									"value": "products",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "5"
+								},
+								{
+									"key": "filter[name]",
+									"value": "Womens Clothing",
+									"disabled": true
+								},
+								{
+									"key": "fields[customers]",
+									"value": "id,name",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajouter un client Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "User test",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "meta",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Récuperer un client Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mette a jour un client Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "User test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@update.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "meta",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supprimer un client Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a98b56c-7157-4da5-b0d0-043aa00271c9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supprimer plusieurs clients Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": [\r\n        \"9a98b56c-7157-4da5-b0d0-043aa00271c9\",\r\n        \"9a98b55b-5855-4a97-86cb-9a94ee41e52a\",\r\n        \"9a98b514-cdcd-4476-95a9-95da533724f8\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/del-multi",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"del-multi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://shoppay-notchpay.test/api/V1",
+			"type": "default"
+		}
+	]
+}
