@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 return [
-    'dev'     => 'Development',
-    'local'   => 'Local',
+    'dev' => 'Development',
+    'local' => 'Local',
     'preprod' => 'Preproduction',
-    'prod'    => 'Production',
+    'prod' => 'Production',
     'staging' => 'Staging',
-    'test'    => 'Test',
+    'test' => 'Test',
 ];

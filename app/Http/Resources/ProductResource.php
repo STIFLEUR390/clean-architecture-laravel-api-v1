@@ -27,7 +27,7 @@ class ProductResource extends JsonResource
             'status' => $this->whenNotNull($this->status),
             'date_to_publish' => $this->whenNotNull($this->date_to_publish),
             'qty' => $this->whenNotNull($this->qty),
-            'img' => $this->whenNotNull($this->img),
+            'img' => $this->whenNotNull(parseUrl($this->img)),
             'created_at' => $this->whenNotNull(Carbon::parse($this->created_at)),
             'updated_at' => $this->whenNotNull(Carbon::parse($this->updated_at)),
             'category_id' => $this->whenNotNull($this->category_id),

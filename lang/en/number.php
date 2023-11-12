@@ -3,6 +3,6 @@
 declare(strict_types=1);
 
 return [
-    'decimals_separator'  => '.',
+    'decimals_separator' => '.',
     'thousands_separator' => ',',
 ];

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ProductStatus;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -30,6 +31,10 @@ class Product extends Model
         'qty',
         'img',
         'category_id',
+    ];
+
+    protected $casts = [
+        'status' => ProductStatus::class,
     ];
 
     /**

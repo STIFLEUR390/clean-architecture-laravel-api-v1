@@ -39,7 +39,8 @@ return [
         /*
          * URL to an image that displays as a small square logo next to the title, above the table of contents.
          */
-        'logo' => public_path('logo/logo.png'),
+        // 'logo' => public_path('logo/logo.png'),
+        'logo' => asset('logo/short_logo.png'),
     ],
 
     /*

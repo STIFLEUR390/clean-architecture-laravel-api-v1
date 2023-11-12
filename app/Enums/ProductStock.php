@@ -8,7 +8,7 @@ use Spatie\Enum\Laravel\Enum;
  * @method static self INSTOCK()
  * @method static self OUTSTOCK()
  */
-final class ProductStatus extends Enum
+final class ProductStock extends Enum
 {
     protected static function labels(): array
     {
