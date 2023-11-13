@@ -2,30 +2,18 @@
 
 namespace App\Enums;
 
-use Spatie\Enum\Laravel\Enum;
-
-/**
- * @method static self SENT()
- * @method static self FAILED()
- * @method static self COMPLETE()
- */
-final class TransfertStatus extends Enum
+enum TransfertStatus: string
 {
-    protected static function labels(): array
-    {
-        return [
-            'sent' => 'L\'ordre de transfert a été remis à l\'opérateur',
-            'failed' => 'le transfert a échoué',
-            'complete' => 'Le transfert a été effectué',
-        ];
-    }
+    case SENT = 'transfer.sent';
+    case FAILED = 'transfer.failed';
+    case COMPLETE = 'transfer.complete';
 
-    protected static function values(): array
+    public function label(): string
     {
-        return [
-            'sent' => 'transfer.sent',
-            'failed' => 'transfer.failed',
-            'complete' => 'transfer.complete',
-        ];
+        return match ($this) {
+            self::SENT => 'L\'ordre de transfert a été remis à l\'opérateur',
+            self::FAILED => 'Le transfert a échoué',
+            self::COMPLETE => 'Le transfert a été effectué',
+        };
     }
 }

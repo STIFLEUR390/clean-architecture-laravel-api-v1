@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\AddressCivility;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -19,6 +20,10 @@ class Address extends Model
      */
     protected $fillable = [
         'customer_id', 'name', 'country', 'city', 'line1', 'line2', 'postal_code', 'state', 'personnal', 'civility',
+    ];
+
+    protected $casts = [
+        'civility' => AddressCivility::class,
     ];
 
     public function customer(): BelongsTo

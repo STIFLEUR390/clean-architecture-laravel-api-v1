@@ -2,36 +2,22 @@
 
 namespace App\Enums;
 
-use Spatie\Enum\Laravel\Enum;
-
-/**
- * @method static self MTN()
- * @method static self ORANGE()
- * @method static self MOBILE()
- * @method static self PAYPAL()
- * @method static self CARD()
- */
-final class PaymentChannel extends Enum
+enum PaymentChannel: string
 {
-    protected static function labels(): array
-    {
-        return [
-            'mtn' => 'MTN Mobile Money Cameroun',
-            'cm.orange' => 'Orange Money Cameroun',
-            'mobile' => 'Orange Money ou MTN Mobile Money Cameroon',
-            'paypal' => 'PayPal',
-            'card' => 'Visa, Mastercard, Amex, etc',
-        ];
-    }
+    case MTN = 'cm.mtn';
+    case ORANGE = 'cm.orange';
+    case MOBILE = 'cm.mobile';
+    case PAYPAL = 'paypal';
+    case CARD = 'Card';
 
-    protected static function values(): array
+    public function label(): string
     {
-        return [
-            'mtn' => 'cm.mtn',
-            'cm.orange' => 'cm.orange',
-            'mobile' => 'cm.mobile',
-            'paypal' => 'paypal',
-            'card' => 'Card',
-        ];
+        return match ($this) {
+            self::MTN => 'MTN Mobile Money',
+            self::ORANGE => 'Orange Money',
+            self::MOBILE => 'Orange Money ou MTN Mobile Money Cameroon',
+            self::PAYPAL => 'PayPal',
+            self::CARD => 'Visa, Mastercard, Amex, etc',
+        };
     }
 }

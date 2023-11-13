@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\PaymentStatus;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -28,6 +29,11 @@ class OrderPayment extends Model
         'meta',
         'order_id',
         'transaction_id',
+    ];
+
+    protected $casts = [
+        'status' => PaymentStatus::class,
+        'channel' => OrderShippindStatus::class,
     ];
 
     /**

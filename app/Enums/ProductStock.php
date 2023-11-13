@@ -2,27 +2,16 @@
 
 namespace App\Enums;
 
-use Spatie\Enum\Laravel\Enum;
-
-/**
- * @method static self INSTOCK()
- * @method static self OUTSTOCK()
- */
-final class ProductStock extends Enum
+enum ProductStock: int
 {
-    protected static function labels(): array
-    {
-        return [
-            'instock' => 'En stock',
-            'outstock' => 'En rupture de stock',
-        ];
-    }
+    case INSTOCK = 1;
+    case OUTSTOCK = 0;
 
-    protected static function values(): array
+    public function label(): string
     {
-        return [
-            'instock' => 1,
-            'outstock' => 0,
-        ];
+        return match ($this) {
+            self::INSTOCK => 'En stock',
+            self::OUTSTOCK => 'En rupture de stock',
+        };
     }
 }

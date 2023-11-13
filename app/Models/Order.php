@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\OrderShippindStatus;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -21,6 +22,15 @@ class Order extends Model
      */
     protected $fillable = [
         'reference', 'total', 'subtotal', 'tax', 'shipping', 'facture', 'status', 'billing_id', 'shipping_id',
+    ];
+
+    /**
+     * casts
+     *
+     * @var array
+     */
+    protected $casts = [
+        'status' => OrderShippindStatus::class,
     ];
 
     /**

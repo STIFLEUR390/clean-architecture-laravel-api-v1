@@ -2,33 +2,20 @@
 
 namespace App\Enums;
 
-use Spatie\Enum\Laravel\Enum;
-
-/**
- * @method static self COMPLETE()
- * @method static self FAILED()
- * @method static self CANCELED()
- * @method static self EXPIRED()
- */
-final class OrderPaymentStatus extends Enum
+enum OrderPaymentStatus: string
 {
-    protected static function labels(): array
-    {
-        return [
-            'complete' => 'La paiement à été fait',
-            'failed' => 'Le paiement a échoué',
-            'canceled' => 'Le paiement a été annulé',
-            'expired' => 'Le délai de traitement du paiement a expiré',
-        ];
-    }
+    case COMPLETE = 'payment.complete';
+    case FAILED = 'payment.failed';
+    case CANCELED = 'payment.canceled';
+    case EXPIRED = 'payment.expired';
 
-    protected static function values(): array
+    public function label(): string
     {
-        return [
-            'complete' => 'payment.complete',
-            'failed' => 'payment.failed',
-            'canceled' => 'payment.canceled',
-            'expired' => 'payment.expired',
-        ];
+        return match ($this) {
+            self::COMPLETE => 'La paiement à été fait',
+            self::FAILED => 'Le paiement a échoué',
+            self::CANCELED => 'Le paiement a été annulé',
+            self::EXPIRED => 'Le délai de traitement du paiement a expiré',
+        };
     }
 }
