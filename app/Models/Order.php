@@ -62,6 +62,6 @@ class Order extends Model
      */
     public function shipping(): BelongsTo
     {
-        return $this->belongsTo(Address::class, 'shipping_id');
+        return $this->belongsTo(Address::class, 'shipping_id', 'id')->withDefault();
     }
 }

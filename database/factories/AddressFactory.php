@@ -29,7 +29,7 @@ class AddressFactory extends Factory
             'customer_id' => Customer::inRandomOrder()->first()->id,
             'civility' => $civility,
             'name' => $name,
-            'country' => $this->faker->country,
+            'country' => 'CM',
             'city' => $this->faker->city,
             'line1' => $this->faker->address,
             'line2' => $this->faker->boolean ? $this->faker->address : null,

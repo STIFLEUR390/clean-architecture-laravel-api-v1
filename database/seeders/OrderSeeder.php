@@ -18,7 +18,7 @@ class OrderSeeder extends Seeder
             $order = Order::factory()->has(
                 OrderDetail::factory()->count(rand(1, 5)), 'order_details'
             )->has(
-                OrderPayment::factory(), 'order_payments'
+                OrderPayment::factory(), 'order_payment'
             )->create();
 
             $subtotal = OrderDetail::where('order_id', $order->id)->sum('total');

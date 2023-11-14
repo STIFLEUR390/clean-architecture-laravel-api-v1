@@ -34,7 +34,7 @@ class ProductFactory extends Factory
             'short_description' => $this->faker->realText(60),
             'description' => $this->faker->realText(),
             'price' => rand(10, 100),
-            'stock' => $this->faker->boolean(75) ? 'instock' : 'outstock',
+            'stock' => $this->faker->boolean(75) ? 1 : 0,
             'status' => $stat,
             'date_to_publish' => $stat == 'scheduled' ? Carbon::now()->addDays(rand(5, 25)) : null,
             'qty' => rand(35, 75),

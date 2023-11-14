@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use App\Models\Order;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -21,6 +21,22 @@ if (! function_exists('transformArrayForSelect')) {
         return $my_array_reversed;
     }
 }
+
+if (! function_exists('generateOrderReference')) {
+    function generateOrderReference()
+    {
+        $order = Order::orderBy('id', 'desc')->first();
+        if (is_null($order)) {
+            $ref = 'INV10000';
+        } else {
+            $sub = intval(substr($order->reference, 2)) + 1;
+            $ref = 'INV'.$sub;
+        }
+
+        return $ref;
+    }
+}
+
 if (! function_exists('parseUrl')) {
     function parseUrl($url): string
     {

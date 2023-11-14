@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('short_description')->nullable();
             $table->text('description')->nullable();
             $table->double('price', 15, 3, true)->nullable();
-            $table->enum('stock', ['instock', 'outstock'])->default('instock');
+            $table->boolean('stock')->default(true);
             $table->enum('status', ['publish', 'scheduled', 'inactive'])->default('publish');
             $table->dateTime('date_to_publish')->nullable();
             $table->unsignedBigInteger('qty');

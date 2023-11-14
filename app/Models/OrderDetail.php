@@ -12,6 +12,8 @@ class OrderDetail extends Model
     use HasFactory;
     use HasUuids;
 
+    protected $table = 'order_details';
+
     /**
      * fillable
      *

@@ -29,6 +29,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/telescope": "^4.17",
         "laravel/tinker": "^2.8",
+        "laraveldaily/laravel-invoices": "^3.1",
         "mbezhanov/faker-provider-collection": "^2.0",
         "notchpay/notchpay-php": "^1.6",
         "nyholm/psr7": "^1.8",

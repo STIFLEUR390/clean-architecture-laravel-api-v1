@@ -17,7 +17,7 @@ class TransferFactory extends Factory
      */
     public function definition(): array
     {
-        $stuts = ['sent', 'failed', 'complete'];
+        $stuts = ['transfer.sent', 'transfer.failed', 'transfer.complete'];
         $channel = ['cm.mtn', 'cm.orange', 'cm.mobile', 'paypal', 'Card'];
 
         return [
