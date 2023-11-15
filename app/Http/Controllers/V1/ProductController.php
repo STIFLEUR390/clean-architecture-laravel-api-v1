@@ -27,7 +27,7 @@ class ProductController extends Controller
     public function __construct(ProductServiceImplement $productService)
     {
         $this->productService = $productService;
-        // $this->authorizeResource(Product::class, 'product');
+        $this->authorizeResource(Product::class, 'product');
     }
 
     /**

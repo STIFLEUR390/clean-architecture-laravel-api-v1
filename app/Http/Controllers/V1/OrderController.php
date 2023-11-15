@@ -28,7 +28,7 @@ class OrderController extends Controller
     public function __construct(OrderServiceImplement $orderService)
     {
         $this->orderService = $orderService;
-        // $this->authorizeResource(Order::class, 'orders');
+        $this->authorizeResource(Order::class, 'order');
     }
 
     /**

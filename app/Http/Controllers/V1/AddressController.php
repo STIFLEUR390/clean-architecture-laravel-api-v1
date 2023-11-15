@@ -24,7 +24,7 @@ class AddressController extends Controller
     public function __construct(AddressServiceImplement $addressService)
     {
         $this->addressService = $addressService;
-        // $this->authorizeResource(Address::class, 'address');
+        $this->authorizeResource(Address::class, 'address');
     }
 
     /**

@@ -12,7 +12,7 @@ class OrderPaymentPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return isset($user->id);
     }
 
     /**
@@ -20,7 +20,7 @@ class OrderPaymentPolicy
      */
     public function view(User $user, OrderPayment $orderPayment): bool
     {
-        //
+        return isset($user->id) && isset($orderPayment->id);
     }
 
     /**
@@ -28,7 +28,7 @@ class OrderPaymentPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return isset($user->id);
     }
 
     /**
@@ -36,7 +36,7 @@ class OrderPaymentPolicy
      */
     public function update(User $user, OrderPayment $orderPayment): bool
     {
-        //
+        return isset($user->id) && isset($orderPayment->id);
     }
 
     /**
@@ -44,7 +44,7 @@ class OrderPaymentPolicy
      */
     public function delete(User $user, OrderPayment $orderPayment): bool
     {
-        //
+        return isset($user->id) && isset($orderPayment->id);
     }
 
     /**
@@ -52,7 +52,7 @@ class OrderPaymentPolicy
      */
     public function restore(User $user, OrderPayment $orderPayment): bool
     {
-        //
+        return isset($user->id) && isset($orderPayment->id);
     }
 
     /**
@@ -60,6 +60,6 @@ class OrderPaymentPolicy
      */
     public function forceDelete(User $user, OrderPayment $orderPayment): bool
     {
-        //
+        return isset($user->id) && isset($orderPayment->id);
     }
 }

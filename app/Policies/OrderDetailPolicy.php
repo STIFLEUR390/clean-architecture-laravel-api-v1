@@ -12,7 +12,7 @@ class OrderDetailPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return isset($user->id);
     }
 
     /**
@@ -20,7 +20,7 @@ class OrderDetailPolicy
      */
     public function view(User $user, OrderDetail $orderDetail): bool
     {
-        //
+        return isset($user->id) && isset($orderDetail->id);
     }
 
     /**
@@ -28,7 +28,7 @@ class OrderDetailPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return isset($user->id);
     }
 
     /**
@@ -36,7 +36,7 @@ class OrderDetailPolicy
      */
     public function update(User $user, OrderDetail $orderDetail): bool
     {
-        //
+        return isset($user->id) && isset($orderDetail->id);
     }
 
     /**
@@ -44,7 +44,7 @@ class OrderDetailPolicy
      */
     public function delete(User $user, OrderDetail $orderDetail): bool
     {
-        //
+        return isset($user->id) && isset($orderDetail->id);
     }
 
     /**
@@ -52,7 +52,7 @@ class OrderDetailPolicy
      */
     public function restore(User $user, OrderDetail $orderDetail): bool
     {
-        //
+        return isset($user->id) && isset($orderDetail->id);
     }
 
     /**
@@ -60,6 +60,6 @@ class OrderDetailPolicy
      */
     public function forceDelete(User $user, OrderDetail $orderDetail): bool
     {
-        //
+        return isset($user->id) && isset($orderDetail->id);
     }
 }

@@ -12,7 +12,7 @@ class TransferPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return isset($user->id);
     }
 
     /**
@@ -20,7 +20,7 @@ class TransferPolicy
      */
     public function view(User $user, Transfer $transfer): bool
     {
-        //
+        return isset($user->id) && isset($transfer->id);
     }
 
     /**
@@ -28,7 +28,7 @@ class TransferPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return isset($user->id);
     }
 
     /**
@@ -36,7 +36,7 @@ class TransferPolicy
      */
     public function update(User $user, Transfer $transfer): bool
     {
-        //
+        return isset($user->id) && isset($transfer->id);
     }
 
     /**
@@ -44,7 +44,7 @@ class TransferPolicy
      */
     public function delete(User $user, Transfer $transfer): bool
     {
-        //
+        return isset($user->id) && isset($transfer->id);
     }
 
     /**
@@ -52,7 +52,7 @@ class TransferPolicy
      */
     public function restore(User $user, Transfer $transfer): bool
     {
-        //
+        return isset($user->id) && isset($transfer->id);
     }
 
     /**
@@ -60,6 +60,6 @@ class TransferPolicy
      */
     public function forceDelete(User $user, Transfer $transfer): bool
     {
-        //
+        return isset($user->id) && isset($transfer->id);
     }
 }
